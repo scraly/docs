@@ -29,6 +29,10 @@ ingress:
 postgresql:
   # This will create a Cinder volume to store the Keycloak PG data
   enabled: true
+  persistence:
+    enabled: true
   postgresqlUsername: "ovhcloud_postgresql_adm" # CHANGEME
   postgresqlPassword: "ThisIsNotAsecuredPassword" # CHANGEME
+  volumePermissions:
+    enabled: true
 
